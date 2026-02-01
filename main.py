@@ -205,13 +205,7 @@ def admin_only(func):
 # How to use:-
 @bot.on_message(filters.command("guide"))
 async def guide_handler(client: Client, message: Message):
-    guide_text = 
-        "1. `/add_channel -100{channel_id}` - Add a channel to the bot.\n"
-        "2. `/remove_channel -100{channel_id}` - Remove a channel from the bot.\n"
-        "3. `/saini .txt` file command - Process the .txt file.\n"
-        "4. `/stop` - Stop the task running in the bot. 🚫\n\n"
-        "If you have any questions, feel free to ask! 💬"
-    )
+    guide_text = "Bot is free for all users."
     await message.reply_text(guide_text)
 
 # 1. /adduser
