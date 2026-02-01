@@ -107,16 +107,6 @@ async def start_command(bot: Client, message: Message):
   
     # Choose a random image URL
     random_image_url = random.choice(image_urls)
-    
-    # Caption for the image
-    caption = (
-        "**𝐇𝐞𝐥𝐥𝐨 𝐃𝐞𝐚𝐫 👋!**\n\n"
-        "➠ **𝐈 𝐚𝐦 𝐚 𝐓𝐞𝐱𝐭 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 𝐁𝐨𝐭 𝐌𝐚𝐝𝐞 By NIKHIL SAINI**\n"
-        "➠ **Can Extract Videos & PDFs From Your Text File and Upload to Telegram!**\n"
-        "➠ **For Guide Use Command /guide 📖**\n\n"
-        "➠ **Use /saini Command to Download From TXT File** 📄\n\n"
-        "➠ **𝐌𝐚𝐝𝐞 𝐁𝐲:** @nikhil_saini_khe"
-    )
 
     # Send the image with caption and buttons
     await bot.send_photo(
