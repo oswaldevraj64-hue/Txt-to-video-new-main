@@ -180,11 +180,7 @@ YOUR_ADMIN_ID = 8342427239
 
 # Function to read subscription data
 def read_subscription_data():
-    if not os.path.exists(SUBSCRIPTION_FILE):
-        return []
-    with open(SUBSCRIPTION_FILE, "r") as f:
-        return [line.strip().split(",") for line in f.readlines()]
-
+    return []
 
 # Function to read channels data
 def read_channels_data():
@@ -219,11 +215,7 @@ def admin_only(func):
 # How to use:-
 @bot.on_message(filters.command("guide"))
 async def guide_handler(client: Client, message: Message):
-    guide_text = (
-        "🔑 **How to get started with Premium**:\n\n"
-        "1. **First of all**, contact the owner and buy a premium plan. 💰\n"
-        "2. **If you are a premium user**, you can check your plan by using `/myplan`. 🔍\n\n"
-        "📖 **Usage**:\n\n"
+    guide_text = 
         "1. `/add_channel -100{channel_id}` - Add a channel to the bot.\n"
         "2. `/remove_channel -100{channel_id}` - Remove a channel from the bot.\n"
         "3. `/saini .txt` file command - Process the .txt file.\n"
@@ -236,6 +228,7 @@ async def guide_handler(client: Client, message: Message):
 @bot.on_message(filters.command("adduser") & filters.private)
 @admin_only
 async def add_user(client, message: Message):
+    return 
     try:
         _, user_id, expiration_date = message.text.split()
         subscription_data = read_subscription_data()
@@ -250,6 +243,7 @@ async def add_user(client, message: Message):
 @bot.on_message(filters.command("removeuser") & filters.private)
 @admin_only
 async def remove_user(client, message: Message):
+    return 
     try:
         _, user_id = message.text.split()
         subscription_data = read_subscription_data()
